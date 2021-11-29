@@ -1,4 +1,4 @@
-# My First PyGame, Trinity Gibbs, 11/29/21 2:77pm, V0.2
+# My First PyGame, Trinity Gibbs, 11/29/21 2:77pm, V0.3
 
 import pygame, sys 
 from pygame.locals import *
@@ -26,3 +26,8 @@ textRect= text.get_rect()
 textRect.centerx = windowSurface.get_rect().centerx
 textRect.centery = windowSurface.get_rect().centery
 
+# Fill background color. 
+windowSurface.fill(WHITE) 
+
+# Draw a polygon onto the screen. 
+pygame.draw.polygon(windowSurface, GREEN, ((146, 0), (291, 106), (236, 277), (56, 277), (0, 106))) 
