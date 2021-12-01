@@ -1,4 +1,5 @@
-# My First PyGame, Trinity Gibbs, 12/1/21 2:15pm, V0.9
+# My First PyGame, Trinity Gibbs, 12/1/21 2:46pm, V0.10
+
 import pygame, sys 
 from pygame.locals import *
 
@@ -16,6 +17,7 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0) 
 BLUE = (0, 0, 255) 
 OCEANBLUE = (148, 216, 236) 
+
 #Setup font.
 basicFont = pygame.font.SysFont(None, 48) 
 
@@ -29,24 +31,36 @@ textRect.centery = windowSurface.get_rect().centery
 windowSurface.fill(OCEANBLUE) 
 
 # Draw a polygon onto the screen. 
-pygame.draw.polygon(windowSurface, GREEN, ((146,0), (291,106), (236,277), (56,277), (0,106))
+pygame.draw.polygon(windowSurface, GREEN, ((146,0), (291,106), (236,277), (56,277), (0,106)))
 
 # draw lines on the screen. 
-Pygame.draw.line(winowSurface, RED, (60,60), (120,60), 4)
-Pygame.draw.line(winowSurface, WHITE, (75,60), (60,75), 2)
-Pygame.draw.line(winowSurface, BLUE, (0,150), (150,0), 1)
+pygame.draw.line(windowSurface, RED, (60,60), (120,60), 4)
+pygame.draw.line(windowSurface, WHITE, (75,60), (60,75), 2)
+pygame.draw.line(windowSurface, BLUE, (0,150), (150,0), 1)
 
 # Draw a circle. 
-pygame.draw.circle(windowSurface, YELLOW, (224, 200), 0)
-pygae,draw.ellipse(windowSurface, RED, (300, 250, 40, 80), 1) 
+pygame.draw.circle(windowSurface, BLACK, (224, 200), 0)
+
+
+pygame.draw.ellipse(windowSurface, RED, (300, 250, 40, 80), 1) 
 
 #draw the text rectangle.
 pygame.draw.rect(windowSurface, RED, (textRect.left - 20, textRect.top - 20, textRect.width + 40, textRect.height+ 40))
 
 # Create Pixle Array
-pixArray = pygame.pixelArray(windowSurface)
+pixArray = pygame.PixelArray(windowSurface)
 pixArray[480][380] = BLUE
 del pixArray
 
 # Draw the text onto the surface. 
 windowSurface.blit(text, textRect) 
+
+# Upate Pygame Display
+pygame.display.update()
+
+#Run game loop.
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit() 
