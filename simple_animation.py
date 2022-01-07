@@ -8,8 +8,8 @@ pygame.init()
 
 # Setup the window
 WINDOWWIDTH = 400
-WINDOWWEIGHT == 400 # WINDOWHEIGHT not WINDOWWEIGHT, just one = also. 
-windowSurface = pygame.display.set_mode(WINDOWWIDTH, WINDOWHHEIGHT), 0,32) # Add a ( between set_mode and (WINDOWWIDTH
+WINDOWHEIGHT = 400 # WINDOWHEIGHT not WINDOWWEIGHT, just one = also. 
+windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHHEIGHT), 0,32) # Add a ( between set_mode and (WINDOWWIDTH
 pygame.display.set_caption('Animation Example!') 
 
 # Setup the direction variables. 
