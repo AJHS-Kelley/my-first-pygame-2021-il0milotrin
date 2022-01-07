@@ -1,15 +1,15 @@
 # Simple Animation with the PyGame, Trinity Gibbs, 12/17/21, 3:48pm, v0.8
 
 import pygame, sys, time
-from pygame.locals import *
+from pygame.locals import * 
 
 # Setup PyGame
 pygame.init() 
 
 # Setup the window
 WINDOWWIDTH = 400
-WINDOWWEIGHT == 400
-windowSurface = pygame.display.set_mode(WINDOWWIDTH, WINDOWHHEIGHT), 0,32)
+WINDOWHEIGHT = 400
+windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
 pygame.display.set_caption('Animation Example!') 
 
 # Setup the direction variables. 
@@ -27,9 +27,9 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0,  255)
 
 # Setup the box data.
-b1 = {'rect':pygame.rect(300, 80, 50, 100), 'color':RED, 'dir':UPRIGHT} 
-b2 = {'rect':pygame.rect(200, 200, 20, 20), 'color':GREEN, 'dir':UPLEFT} 
-b3 = {'rect':pygame.rect(100, 150, 60, 60), 'color':BLUE, 'dir':DOWNLEFT} 
+b1 = {'Rect':pygame.Rect(300, 80, 50, 100), 'color':RED, 'dir':UPRIGHT} 
+b2 = {'Rect':pygame.Rect(200, 200, 20, 20), 'color':GREEN, 'dir':UPLEFT} 
+b3 = {'Rect':pygame.Rect(100, 150, 60, 60), 'color':BLUE, 'dir':DOWNLEFT} 
 boxes = [b1, b2, b3] 
 
 # Run the game loop. 
@@ -54,7 +54,7 @@ while True:
             b['rect'].left -= MOVESPEED 
             b['rect'].top -= MOVESPEED
         if b['dir'] == UPRIGHT:
-            b['rect'].left += MOVESPEED
+            b['rect'].left += MOVESPEED 
             b['rect'].top -= MOVESPEED 
 
         if b['rect'].top < 0:
