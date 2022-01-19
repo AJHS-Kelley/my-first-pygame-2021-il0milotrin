@@ -1,1 +1,8 @@
-# PyGame Collision Detection Practice, Trinity Gibbs, January 11, 2022, 2:44PM, v0.0
+# PyGame Collision Detection Practice, Trinity Gibbs, January 19, 2022, 1:39PM, v0.1
+
+import pygame, sys, random 
+from pygame.locals  import *
+
+# Setup PyGame 
+pygame.init()
+mainClock = pygame.time.Clock() 
