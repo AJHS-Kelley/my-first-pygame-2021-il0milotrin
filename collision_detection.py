@@ -77,7 +77,11 @@ while True:
         if event.type == MOUSEBUTTONUP:
             foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE))
 
-
+    foodCounter += 1
+    if foodCounter => NEWFOOD:
+        # Add new food. 
+        foodCounter = 0
+        foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint))
             
 
 
